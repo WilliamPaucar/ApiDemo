@@ -1,0 +1,48 @@
+body {
+  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+
+.card-container {
+  background-color:aqua ;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.card {
+  font-size:20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 200px; /* Ajusta la altura según sea necesario */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+.card-container :hover{
+  animation: moveRight 0.2s infinite alternate;
+  
+}
+
+@keyframes moveRight {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
